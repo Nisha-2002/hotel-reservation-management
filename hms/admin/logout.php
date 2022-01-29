@@ -1,0 +1,9 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["name"]))
+    header("Location:authorize.php");
+    else{
+        session_destroy();
+        header("Location:authorize.php");
+    }
+  ?>
